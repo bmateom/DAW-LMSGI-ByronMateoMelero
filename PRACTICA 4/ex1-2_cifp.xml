@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cifp SYSTEM "ex1-1_cifp.dtd">
+
+<cifp>
+    <alumne id="1">
+        <nom>Joan</nom>
+        <llinatges>Garcia Pons</llinatges>
+        <data_naixement>26-03-2006</data_naixement>
+        <correu>joan.garcia@correu.com</correu>
+        <telefon>612345678</telefon>
+        <adreça>Inca</adreça>
+        <data_matricula>15-09-2024</data_matricula>
+        <curs>DAM</curs>
+    </alumne>
+
+    <alumne id="2">
+        <nom>Laura</nom>
+        <llinatges>Ferrer Nadal</llinatges>
+        <data_naixement>04-11-2005</data_naixement>
+        <correu>laura.ferrer@correu.com</correu>
+        <telefon>611222333</telefon>
+        <adreça>Palma</adreça>
+        <data_matricula>15-09-2024</data_matricula>
+        <curs>DAW</curs>
+    </alumne>
+
+    <professor id="1">
+        <nom>Pere</nom>
+        <llinatges>Lopez Martorell</llinatges>
+        <data_naixement>26-03-1996</data_naixement>
+        <correu>plm@correu.com</correu>
+        <telefon>613456789</telefon>
+        <adreça>Inca</adreça>
+        <data_incorporacio>1-2-2024</data_incorporacio>
+        <departament>Informàtica</departament>
+        <assignatura id_assignatura="1">
+            <nom_assignatura cicle="DAW">Bases de dades</nom_assignatura>
+            <data_inici>10-10-2024</data_inici>
+            <data_final>30-5-2025</data_final>
+        </assignatura>
+        <assignatura id_assignatura="2">
+            <nom_assignatura cicle="DAM">Programació</nom_assignatura>
+            <data_inici>13-10-2025</data_inici>
+        </assignatura>
+    </professor>
+
+    <professor id="2">
+        <nom>Maria</nom>
+        <llinatges>Ferrer Llull</llinatges>
+        <data_naixement>12-07-1984</data_naixement>
+        <correu>mfl@correu.com</correu>
+        <telefon>620111222</telefon>
+        <adreça>Manacor</adreça>
+        <data_incorporacio>15-09-2016</data_incorporacio>
+        <departament>Electricitat</departament>
+        <assignatura id_assignatura="3">
+            <nom_assignatura cicle="SMX">Instal·lacions</nom_assignatura>
+        </assignatura>
+    </professor>
+
+
+</cifp>

@@ -1,0 +1,95 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": {
+        "persona": {
+            "type":"object",
+            "properties": {
+                "id": {"type":"integer"},
+                "nom": {"type": "string"},
+                "llinatges": {"type": "string"},
+                "data_naixement": {"type": "string" },
+                "correu": {"type": "string", "format": "email"},
+                "telefon": {"type": "string"},
+                "adreça": {"type": "string"}
+            },
+            "required": ["id","nom","llinatges"]
+            
+        },
+        "assignatura": {
+            "type": "object",
+            "properties": {
+                "id_assignatura": {"type": "integer"},
+                "nom_assignatura": {"type": "string"},
+                "cicle": {
+                    "enum": ["DAM","DAW","ASIX","SMX","SEIA","ER","AUT"]
+                    },
+                "data_inici": {"type": "string" },
+                "data_final": {"type": "string" }
+            },
+            "required": ["id_assignatura", "nom_assignatura", "cicle"],
+            "additionalProperties": false
+            
+        }
+
+    },
+    "type": "object",
+    "properties": {
+        "cifp": {
+            "type": "object",
+            "properties": {
+                "alumne": {
+                    "type": "array",
+                    "items": {
+                        "allOf": [
+                            {"$ref": "#/definitions/persona"},
+                            {
+                                "type": "object",
+                                "properties": {
+                                    "data_matricula": {"type": "string" },
+                                    "curs": {
+                                        "enum": ["DAM","DAW","ASIX","SMX","SEIA","ER","AUT"]
+                                        }
+                                },
+                                "required": ["data_matricula", "curs"]
+                            }
+                        ]   
+                    }
+                    
+                },
+                "professor": {
+                    "type": "array",
+                    "items": {
+                        "allOf": [
+                            {"$ref": "#/definitions/persona"},
+                            {
+                                "type": "object",
+                                "properties": {
+                                    "data_incorporacio": {"type": "string" },
+                                    "departament": {
+                                        "enum": ["Informàtica","Electricitat","Automoció"]
+                                    },
+                                    "assignatura": {
+                                        "type": "array",
+                                        "items": {
+                                            "$ref": "#/definitions/assignatura"
+                                            }
+                                    }
+                                },
+                                "required": ["data_incorporacio", "departament"]
+                                
+                            }
+                        ]
+                        
+                    }
+                }
+            },
+            "additionalProperties": false,
+            "anyOf": [
+                {"required": ["alumne"]},
+                {"required": ["professor"]}
+            ]
+        }
+    },
+    "required": ["cifp"]
+
+}

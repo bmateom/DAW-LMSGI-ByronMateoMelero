@@ -1,0 +1,39 @@
+{
+    "cifp": {
+        "alumne": [
+            {
+                "id": 1,
+                "nom": "Byron",
+                "llinatges": "Mateo Melero",
+                "data_naixement": "26-03-1996",
+                "data_matricula": "10-10-2025",
+                "curs": "DAW"
+            },
+            {
+                "id": 2,
+                "nom": "Paula",
+                "llinatges": "Garcia Joan",
+                "data_naixement": "03-12-1997",
+                "data_matricula": "10-10-2024",
+                "curs": "DAM"
+            }
+        ],
+        "professor": [
+            {
+                "id": 1,
+                "nom": "Miquel",
+                "llinatges": "Ferrer Amengual",
+                "data_naixement": "21-04-1987",
+                "data_incorporacio": "03-03-2023",
+                "departament": "Informàtica",
+                "assignatura": [
+                    {
+                        "id_assignatura": 1,
+                        "nom_assignatura": "Programació",
+                        "cicle": "DAM"
+                    }
+                ]
+            }
+        ]
+    }
+}
