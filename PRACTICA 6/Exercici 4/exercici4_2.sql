@@ -5,6 +5,7 @@ SELECT
 FROM
 	offices;
 
+
 -- 4.2.2
 
 SELECT
@@ -14,29 +15,17 @@ FROM
 WHERE 
 	JSON_EXTRACT(data, "$.extension") like "%23%";
     
-    -- o bé
-SELECT
-	*
-FROM 
-	employees
-WHERE 
-	JSON_EXTRACT(data, "$.extension") LIKE "%23%";
-    
 
 -- 4.2.3
 
-SELECT 
-	employees.data->>"$.employeeNumber" AS employeeNumber,
-    employees.data->>"$.lastName" AS lastName
-FROM employees;
-    
-    -- o bé es refereix a:
 SELECT 
 	employee_id,
     employees.data->>"$.lastName" AS lastName
 FROM employees;
 
+
 -- 4.2.4
+
 SELECT
 	emp.data->>"$.employeeNumber" AS employeeNumber,
     CONCAT(emp.data->>"$.firstName", ' ', emp.data->>"$.lastName") AS fullName,
