@@ -1,5 +1,5 @@
 // 1. Cerca per confirmar el nom oficial del municipi
-GET http://ideib.caib.es/adreces/rest/municipis?inici=Inca
+GET https://ideib.caib.es/adreces/rest/municipis?inici=Inca
 
 // 2. Recuperació de la informació i coordenades WGS84
 GET https://ideib.caib.es/adreces/rest/municipi/07027?wgs84=1
