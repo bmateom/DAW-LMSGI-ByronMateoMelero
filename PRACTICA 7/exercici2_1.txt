@@ -1,0 +1,1 @@
+GET http://ideib.caib.es/adreces/rest/municipis?illa=Menorca

@@ -1,0 +1,1 @@
+GET https://ideib.caib.es/adreces/rest/municipi/07027?wgs84=1
